@@ -18,7 +18,7 @@ class FilterEditorView
       @_schedulePopulateList()
 
     $(@filterEditor).blur (e) =>
-      # @cancel()
+      @cancel()
 
     atom.commands.add @root,
       'core:move-up': (event) =>
