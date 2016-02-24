@@ -1,10 +1,9 @@
 {
   "name": "filter-editor-view",
   "main": "./lib/filter-editor-view",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "filter-editor-view:toggle"
   },
