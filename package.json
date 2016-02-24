@@ -1,0 +1,19 @@
+{
+  "name": "filter-editor-view",
+  "main": "./lib/filter-editor-view",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "filter-editor-view:toggle"
+  },
+  "repository": "https://github.com/JavaCS3/filter-editor-view",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "jquery": ">2.0.0"
+  }
+}
