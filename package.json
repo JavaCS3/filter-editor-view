@@ -2,11 +2,8 @@
   "name": "filter-editor-view",
   "main": "./lib/filter-editor-view",
   "version": "0.1.0",
-  "description": "A short description of your package",
+  "description": "Atom filter editor view",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "filter-editor-view:toggle"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/JavaCS3/filter-editor-view.git"
