@@ -1,7 +1,7 @@
 {
   "name": "filter-editor-view",
   "main": "./lib/filter-editor-view",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
@@ -17,5 +17,13 @@
   },
   "dependencies": {
     "jquery": ">2.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/JavaCS3/filter-editor-view/issues"
+  },
+  "homepage": "https://github.com/JavaCS3/filter-editor-view",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Wei"
 }
