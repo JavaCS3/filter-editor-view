@@ -102,7 +102,7 @@ class FilterEditorView
   _getSelectedItem: ->
     @$list.find('.selected')
 
-  _confirmedCallback: ->
+  _confirmedCallback: (str) ->
 
   onConfirmed: (callback) ->
     if typeof callback is 'function'
@@ -110,7 +110,6 @@ class FilterEditorView
 
   # Confirm
   confirm: ->
-    console.log 'confirm...'
     @confirmed = true
     selectedItem = @_getSelectedItem()
     if selectedItem.length isnt 0
