@@ -147,8 +147,9 @@ class FilterEditorView
     if @confirmed
       return @confirmed = false
 
-    @$list.empty()
     result = @_filterSyncCallback(@getText())
+
+    @$list.empty()
     @$list.append($('<li/>').text(i)) for i in result
 
     if result.length > 0
