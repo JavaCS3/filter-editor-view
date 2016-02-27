@@ -7,6 +7,7 @@ module.exports =
 class FilterEditorView
   scheduleTimeout: null
   confirmed: false
+  filterToken: ""
 
   constructor: (args) ->
     @_createFrameArea()
@@ -136,19 +137,26 @@ class FilterEditorView
     if @filterEditor.getModel().getText().length isnt 0
       @scheduleTimeout = setTimeout (=> @_populateList()), 200
 
-  _filterSyncCallback: (str) ->
-    []
+  _filterCallback: (token, str, responseCallback) ->
+    responseCallback(token, [])
 
-  onFilterSync: (callback) ->
+  onFilter: (callback) ->
     if typeof callback is 'function'
-      @_filterSyncCallback = callback
+      @_filterCallback = callback
+
+  _responseCallback: (token, result) =>
+    if token is @filterToken
+      @_updateResult(result)
 
   _populateList: ->
     if @confirmed
       return @confirmed = false
 
-    result = @_filterSyncCallback(@getText())
+    process.nextTick =>
+      @filterToken = Math.random().toString(36).substring(7)
+      @_filterCallback(@filterToken, @getText(), @_responseCallback)
 
+  _updateResult: (result) ->
     @$list.empty()
     @$list.append($('<li/>').text(i)) for i in result
 
