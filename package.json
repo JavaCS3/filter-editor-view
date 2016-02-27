@@ -1,7 +1,7 @@
 {
   "name": "filter-editor-view",
   "main": "./lib/filter-editor-view",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Atom filter editor view",
   "keywords": [],
   "repository": {
