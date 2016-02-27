@@ -3,7 +3,7 @@
   "main": "./lib/filter-editor-view",
   "version": "1.0.1",
   "description": "Atom filter editor view",
-  "keywords": [],
+  "keywords": ["atom", "filter"],
   "repository": {
     "type": "git",
     "url": "https://github.com/JavaCS3/filter-editor-view.git"
