@@ -105,11 +105,14 @@ class FilterEditorView
 
   _confirmedCallback: (str) ->
 
+  # @API
+  # Set confirmed callback
   onConfirmed: (callback) ->
     if typeof callback is 'function'
       @_confirmedCallback = callback
 
-  # Confirm
+  # @API
+  # Confirm the input
   confirm: ->
     @confirmed = true
     selectedItem = @_getSelectedItem()
@@ -117,6 +120,7 @@ class FilterEditorView
       @setText(selectedItem.text())
     @_confirmedCallback(@getText())
 
+  # @API
   # Cancel all the ongoing event
   cancel: ->
     @confirmed = false
@@ -124,11 +128,13 @@ class FilterEditorView
     @root.classList.remove('popover-list')
     @$list.empty()
 
-  # Set the text of filter editor
+  # @API
+  # Set the text of the filter editor
   setText: (text) ->
     @filterEditor.getModel().setText(text)
 
-  # Get the text of filter editor
+  # @API
+  # Get the text of the filter editor
   getText: ->
     @filterEditor.getModel().getText()
 
@@ -140,6 +146,8 @@ class FilterEditorView
   _filterCallback: (token, str, responseCallback) ->
     responseCallback(token, [])
 
+  # @API
+  # Set filter callback
   onFilter: (callback) ->
     if typeof callback is 'function'
       @_filterCallback = callback
@@ -174,5 +182,7 @@ class FilterEditorView
   destroy: ->
     @root.remove()
 
+  # @API
+  # Returns the DOM element
   getElement: ->
     @root
