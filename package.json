@@ -15,6 +15,9 @@
   "dependencies": {
     "jquery": ">2.0.0"
   },
+  "devDependencies": {
+   "coffeelint": "^1.9.7"
+  },
   "bugs": {
     "url": "https://github.com/JavaCS3/filter-editor-view/issues"
   },
