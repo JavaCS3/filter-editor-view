@@ -173,7 +173,7 @@ class FilterEditorView
     else
       @root.classList.remove('popover-list')
 
-    @_selectItem(@$list.find('li:first'))
+    @_selectItem(null) # select input field
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
