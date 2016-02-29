@@ -8,3 +8,6 @@
 * Fix bug: User have to dismiss highlight the first popover list item
   when input field text doesn't match the first popover list item if he
   wants to search that text
+
+## 1.0.3
+* Fix bug: When confirmed search, input change won't update immediately

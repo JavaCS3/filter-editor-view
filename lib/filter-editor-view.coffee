@@ -114,9 +114,9 @@ class FilterEditorView
   # @API
   # Confirm the input
   confirm: ->
-    @confirmed = true
     selectedItem = @_getSelectedItem()
     if selectedItem.length isnt 0
+      @confirmed = true
       @setText(selectedItem.text())
     @_confirmedCallback(@getText())
 
