@@ -89,16 +89,14 @@ class FilterEditorView
     @_scrollToItem($item)
 
   _scrollToItem: ($item) ->
-    delta = 5
-    listHeight = @$list.height()
-    itemHeight = $item.outerHeight()
     scrollTop = @$list.scrollTop()
-    desiredTop = $item.position().top
+    desiredTop = $item.position().top + scrollTop
+    desiredBottom = desiredTop + $item.outerHeight()
 
-    if desiredTop - scrollTop > listHeight - delta
-      @$list.scrollTop(desiredTop - listHeight + itemHeight)
-    else if scrollTop - desiredTop > itemHeight - delta
+    if desiredTop < scrollTop
       @$list.scrollTop(desiredTop)
+    else if desiredBottom > @$list.scrollTop() + @$list.height()
+      @$list.scrollTop(desiredBottom - @$list.height())
 
   _getSelectedItem: ->
     @$list.find('.selected')
