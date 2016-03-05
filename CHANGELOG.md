@@ -15,3 +15,6 @@
 ## 1.0.4
 * Fix bug: When press up/down key, scroll going crazy.
   Use space-pen's implementation
+
+## 1.0.5
+* Add filter-editor-view class style.
