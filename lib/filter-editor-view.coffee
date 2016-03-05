@@ -70,7 +70,7 @@ class FilterEditorView
 
   _createFrameArea: ->
     @root = document.createElement('div')
-    @root.classList.add('select-list', 'block')
+    @root.classList.add('filter-editor-view', 'select-list', 'block')
 
     @filterEditor = document.createElement('atom-text-editor')
     @filterEditor.setAttribute('mini', true)
